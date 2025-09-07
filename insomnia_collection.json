@@ -1,0 +1,24 @@
+{
+  "_type": "collection",
+  "name": "DNCommerce Example Requests",
+  "requests": [
+    {
+      "name": "Create Product",
+      "method": "POST",
+      "url": "http://localhost:3000/produtos",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"sku\": \"SKU-001\", \"nome_produto\": \"M\\u00e1scara Facial Hidratante\", \"descricao\": \"M\\u00e1scara facial 50ml\", \"preco\": 29.9, \"quantidade\": 100, \"localizacao\": \"EST-01\"}"
+      }
+    },
+    {
+      "name": "Create Sale",
+      "method": "POST",
+      "url": "http://localhost:3000/vendas",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"cliente_id\": null, \"itens\": [{\"produto_id\": \"<produto-uuid>\", \"quantidade\": 2}], \"forma_pagamento\": \"cartao\"}"
+      }
+    }
+  ]
+}
