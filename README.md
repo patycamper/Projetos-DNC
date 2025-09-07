@@ -1,41 +1,18 @@
 # RID176780_Desafio01_DNCommerce
 
-Projeto de exemplo para o desafio — substitua `RID176780` pelo seu RID.
+Projeto DNCommerce - API Backend
+---
+**Descrição:**
+Uma API backend robusta construída para um sistema de e-commerce, focada em gerenciar o catálogo de produtos, o registro de clientes e o fluxo completo de vendas. O projeto utiliza um banco de dados PostgreSQL para garantir a integridade e persistência dos dados.
 
-## Como executar
+**Funcionalidades Principais:**
+- **Clientes:** Cadastro e gestão de informações de clientes.
+- **Produtos:** Gestão de inventário e informações detalhadas de produtos.
+- **Vendas:** Registro de transações de venda com controle de estoque e totalização de valores.
 
-1. Copie `.env.example` para `.env` e preencha as credenciais do Postgres.
-2. Crie o banco Postgres (ex: `dncommerce_dev`).
-3. Rode o script SQL `src/db/migrations.sql` para criar as tabelas:
+**Tecnologias Utilizadas:**
+- **Node.js**
+- **Express.js** (para a criação da API)
+- **PostgreSQL** (como banco de dados)
 
-```bash
-psql -U seu_usuario -d dncommerce_dev -f src/db/migrations.sql
-```
-
-4. Instale as dependências:
-
-```
-npm install
-```
-
-5. Inicie o servidor:
-
-```
-npm start
-```
-
-## Endpoints
-
-- `POST /produtos` — cadastra produto
-- `GET /produtos` — lista produtos
-- `GET /produtos/:id` — busca produto
-- `PUT /produtos/:id` — atualiza produto
-- `DELETE /produtos/:id` — remove produto
-- `POST /vendas` — cria venda
-- `GET /vendas` — lista vendas
-- `GET /vendas/:id` — detalhes da venda
-
-## Observações
-
-- UUIDs podem ser gerados no Postgres com extensão ou no Node (o projeto gera com `uuid`).
-- Para ambiente real, recomendo usar migrations via `knex`/`sequelize`/`typeorm` e adicionar validações com `Joi`.
+Este projeto foi desenvolvido como parte do desafio para a matéria de banco de dados do curso de Arquitura de Software, demonstrando a implementação de uma API completa seguindo boas práticas de desenvolvimento.
